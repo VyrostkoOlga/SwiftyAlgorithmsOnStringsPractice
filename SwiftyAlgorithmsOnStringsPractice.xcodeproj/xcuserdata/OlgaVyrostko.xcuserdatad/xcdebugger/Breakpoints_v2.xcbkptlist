@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftyAlgorithmsOnStringsPractice/Trie.swift"
-            timestampString = "521903573.013173"
+            timestampString = "521907983.396625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "addIfNeededEdge(fromV:marked:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "findPositionsInText(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

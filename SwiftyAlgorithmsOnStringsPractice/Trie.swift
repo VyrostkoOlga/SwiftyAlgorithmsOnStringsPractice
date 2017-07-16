@@ -30,6 +30,8 @@ class Trie {
     private(set) var edges = [Int: [Edge]]()
     var notOccupiedV: Int = 1
     
+    static let endSymbol: Character = "$"
+    
     static func buildTrie(_ patterns: [String]) -> Trie {
         let trie = Trie()
         for pattern in patterns {
@@ -38,9 +40,41 @@ class Trie {
             for c in patternChars {
                 currentV = trie.addIfNeededEdge(fromV: currentV, marked: c)
             }
-            let _ = trie.addIfNeededEdge(fromV: currentV, marked: "$")
+            let _ = trie.addIfNeededEdge(fromV: currentV, marked: Trie.endSymbol)
         }
         return trie
+    }
+    
+    func findPositionsInText(_ text: String) -> [Int] {
+        var positions = [Int]()
+        for pos in 0..<text.characters.count {
+            if checkContainsPatterns(text, fromPosition: pos) {
+                positions.append(pos)
+            }
+        }
+        return positions
+    }
+    
+    fileprivate func checkContainsPatterns(_ text: String, fromPosition pos: Int) -> Bool {
+        var queue = [0]
+        var offset = 0
+        while !queue.isEmpty {
+            var nextQueue = [Int]()
+            while !queue.isEmpty {
+                guard let v = queue.popLast() else { break }
+                guard let vEdges = edges[v] else { return true }
+                for edge in vEdges {
+                    if edge.mark == Trie.endSymbol { return true }
+                    
+                    if pos + offset < text.characters.count, edge.mark == text[pos + offset] {
+                        nextQueue.append(edge.v)
+                    }
+                }
+            }
+            queue = nextQueue
+            offset += 1
+        }
+        return false
     }
     
     fileprivate func addIfNeededEdge(fromV v: Int, marked mark: Character) -> Int {

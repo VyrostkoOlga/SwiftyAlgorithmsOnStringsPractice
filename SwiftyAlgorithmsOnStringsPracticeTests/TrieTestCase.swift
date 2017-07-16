@@ -37,4 +37,12 @@ class TrieTestCase: XCTestCase {
         XCTAssertEqual([Edge(v: 6, mark: "$")], trie.edges[5]!)
         XCTAssertEqual([Edge(v: 8, mark: "$")], trie.edges[7]!)
     }
+    
+    func testTriePatternMatching() {
+        let patterns = ["ABA", "BB", "ABBAA"]
+        let trie = Trie.buildTrie(patterns)
+        XCTAssertEqual([0], trie.findPositionsInText("BBACAAAAAAAAAAAA"))
+        XCTAssertEqual([1, 3, 6], trie.findPositionsInText("BABABABB"))
+        XCTAssertEqual([0, 1, 4], trie.findPositionsInText("ABBAABA"))
+    }
 }
