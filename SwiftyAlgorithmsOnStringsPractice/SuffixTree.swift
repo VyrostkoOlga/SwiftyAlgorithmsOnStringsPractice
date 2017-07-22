@@ -44,7 +44,7 @@ class SuffixTree {
     
     // MARK: - tree add one more pattern methods
     
-    internal func findVForPattern(_ pattern: String) -> (v: Int, dist: Int, visitedFrom: Int, visitedFromDist: Int) {
+    func findVForPattern(_ pattern: String) -> (v: Int, dist: Int, visitedFrom: Int, visitedFromDist: Int) {
         let patternLength = pattern.characters.count
         
         var queue = [0]

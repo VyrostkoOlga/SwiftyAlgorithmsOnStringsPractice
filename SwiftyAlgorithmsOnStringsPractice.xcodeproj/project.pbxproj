@@ -13,6 +13,9 @@
 		7D6960A81F1B9C4300FB5689 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6960A71F1B9C4300FB5689 /* main.swift */; };
 		7D6960AB1F1BAA8500FB5689 /* StringSubscriptExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */; };
 		7D6960AC1F1BAC0400FB5689 /* StringSubscriptExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */; };
+		7DE7C7921F23B0910062ADF5 /* SharedSubstringsMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7C7911F23B0910062ADF5 /* SharedSubstringsMatching.swift */; };
+		7DE7C7931F23B0910062ADF5 /* SharedSubstringsMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7C7911F23B0910062ADF5 /* SharedSubstringsMatching.swift */; };
+		7DE7C7951F23B4960062ADF5 /* SharedSubstringMatchingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7C7941F23B4960062ADF5 /* SharedSubstringMatchingTestCase.swift */; };
 		C973EA0D1F225E3D00493643 /* SuffixTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973EA0C1F225E3D00493643 /* SuffixTreeTest.swift */; };
 		C986638F1F2305E5002F48BB /* SuffixTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B397131F211B1A00865D8F /* SuffixTree.swift */; };
 		C9B397141F211B1A00865D8F /* SuffixTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B397131F211B1A00865D8F /* SuffixTree.swift */; };
@@ -38,6 +41,8 @@
 		7D6960A41F1B966700FB5689 /* TrieTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrieTestCase.swift; sourceTree = "<group>"; };
 		7D6960A71F1B9C4300FB5689 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubscriptExtension.swift; sourceTree = "<group>"; };
+		7DE7C7911F23B0910062ADF5 /* SharedSubstringsMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSubstringsMatching.swift; sourceTree = "<group>"; };
+		7DE7C7941F23B4960062ADF5 /* SharedSubstringMatchingTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSubstringMatchingTestCase.swift; sourceTree = "<group>"; };
 		C973EA0C1F225E3D00493643 /* SuffixTreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixTreeTest.swift; sourceTree = "<group>"; };
 		C9B397131F211B1A00865D8F /* SuffixTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,10 +86,10 @@
 		7D6960891F1B8ACD00FB5689 /* SwiftyAlgorithmsOnStringsPractice */ = {
 			isa = PBXGroup;
 			children = (
+				7DE7C7901F23B06D0062ADF5 /* Algorithms */,
+				7DE7C78F1F23B0580062ADF5 /* Structures */,
 				7D6960A91F1BAA6B00FB5689 /* Extensions */,
-				7D6960911F1B8AEF00FB5689 /* Trie.swift */,
 				7D6960A71F1B9C4300FB5689 /* main.swift */,
-				C9B397131F211B1A00865D8F /* SuffixTree.swift */,
 			);
 			path = SwiftyAlgorithmsOnStringsPractice;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 				7D6960A01F1B963A00FB5689 /* Info.plist */,
 				7D6960A41F1B966700FB5689 /* TrieTestCase.swift */,
 				C973EA0C1F225E3D00493643 /* SuffixTreeTest.swift */,
+				7DE7C7941F23B4960062ADF5 /* SharedSubstringMatchingTestCase.swift */,
 			);
 			path = SwiftyAlgorithmsOnStringsPracticeTests;
 			sourceTree = "<group>";
@@ -105,6 +111,23 @@
 				7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7DE7C78F1F23B0580062ADF5 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				7D6960911F1B8AEF00FB5689 /* Trie.swift */,
+				C9B397131F211B1A00865D8F /* SuffixTree.swift */,
+			);
+			name = Structures;
+			sourceTree = "<group>";
+		};
+		7DE7C7901F23B06D0062ADF5 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				7DE7C7911F23B0910062ADF5 /* SharedSubstringsMatching.swift */,
+			);
+			name = Algorithms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE7C7921F23B0910062ADF5 /* SharedSubstringsMatching.swift in Sources */,
 				C9B397141F211B1A00865D8F /* SuffixTree.swift in Sources */,
 				7D6960AB1F1BAA8500FB5689 /* StringSubscriptExtension.swift in Sources */,
 				7D6960A81F1B9C4300FB5689 /* main.swift in Sources */,
@@ -214,7 +238,9 @@
 				C973EA0D1F225E3D00493643 /* SuffixTreeTest.swift in Sources */,
 				7D6960AC1F1BAC0400FB5689 /* StringSubscriptExtension.swift in Sources */,
 				7D6960A51F1B966700FB5689 /* TrieTestCase.swift in Sources */,
+				7DE7C7951F23B4960062ADF5 /* SharedSubstringMatchingTestCase.swift in Sources */,
 				7D6960A61F1B97E800FB5689 /* Trie.swift in Sources */,
+				7DE7C7931F23B0910062ADF5 /* SharedSubstringsMatching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
