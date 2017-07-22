@@ -13,6 +13,9 @@
 		7D6960A81F1B9C4300FB5689 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6960A71F1B9C4300FB5689 /* main.swift */; };
 		7D6960AB1F1BAA8500FB5689 /* StringSubscriptExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */; };
 		7D6960AC1F1BAC0400FB5689 /* StringSubscriptExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */; };
+		C973EA0D1F225E3D00493643 /* SuffixTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973EA0C1F225E3D00493643 /* SuffixTreeTest.swift */; };
+		C986638F1F2305E5002F48BB /* SuffixTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B397131F211B1A00865D8F /* SuffixTree.swift */; };
+		C9B397141F211B1A00865D8F /* SuffixTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B397131F211B1A00865D8F /* SuffixTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +38,8 @@
 		7D6960A41F1B966700FB5689 /* TrieTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrieTestCase.swift; sourceTree = "<group>"; };
 		7D6960A71F1B9C4300FB5689 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7D6960AA1F1BAA8500FB5689 /* StringSubscriptExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubscriptExtension.swift; sourceTree = "<group>"; };
+		C973EA0C1F225E3D00493643 /* SuffixTreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixTreeTest.swift; sourceTree = "<group>"; };
+		C9B397131F211B1A00865D8F /* SuffixTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,7 @@
 				7D6960A91F1BAA6B00FB5689 /* Extensions */,
 				7D6960911F1B8AEF00FB5689 /* Trie.swift */,
 				7D6960A71F1B9C4300FB5689 /* main.swift */,
+				C9B397131F211B1A00865D8F /* SuffixTree.swift */,
 			);
 			path = SwiftyAlgorithmsOnStringsPractice;
 			sourceTree = "<group>";
@@ -88,6 +94,7 @@
 			children = (
 				7D6960A01F1B963A00FB5689 /* Info.plist */,
 				7D6960A41F1B966700FB5689 /* TrieTestCase.swift */,
+				C973EA0C1F225E3D00493643 /* SuffixTreeTest.swift */,
 			);
 			path = SwiftyAlgorithmsOnStringsPracticeTests;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B397141F211B1A00865D8F /* SuffixTree.swift in Sources */,
 				7D6960AB1F1BAA8500FB5689 /* StringSubscriptExtension.swift in Sources */,
 				7D6960A81F1B9C4300FB5689 /* main.swift in Sources */,
 				7D6960921F1B8AEF00FB5689 /* Trie.swift in Sources */,
@@ -202,6 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C986638F1F2305E5002F48BB /* SuffixTree.swift in Sources */,
+				C973EA0D1F225E3D00493643 /* SuffixTreeTest.swift in Sources */,
 				7D6960AC1F1BAC0400FB5689 /* StringSubscriptExtension.swift in Sources */,
 				7D6960A51F1B966700FB5689 /* TrieTestCase.swift in Sources */,
 				7D6960A61F1B97E800FB5689 /* Trie.swift in Sources */,
@@ -370,6 +380,7 @@
 				7D6960901F1B8ACD00FB5689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D6960A11F1B963A00FB5689 /* Build configuration list for PBXNativeTarget "SwiftyAlgorithmsOnStringsPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -378,6 +389,7 @@
 				7D6960A31F1B963A00FB5689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

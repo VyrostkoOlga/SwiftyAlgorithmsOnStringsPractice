@@ -8,27 +8,27 @@
 
 import Foundation
 
-struct Edge: CustomStringConvertible, Equatable, Hashable {
-    let v: Int
-    let mark: Character
-    
-    var description: String {
-        return "\(v): \(mark)"
-    }
-    
-    var hashValue: Int {
-        return v
-    }
-    
-    static func ==(lhs: Edge, rhs: Edge) -> Bool {
-        return lhs.v == rhs.v && lhs.mark == rhs.mark
-    }
-}
-
 class Trie {
     
+    struct Edge: CustomStringConvertible, Equatable, Hashable {
+        let v: Int
+        let mark: Character
+        
+        var description: String {
+            return "\(v): \(mark)"
+        }
+        
+        var hashValue: Int {
+            return v
+        }
+        
+        static func ==(lhs: Edge, rhs: Edge) -> Bool {
+            return lhs.v == rhs.v && lhs.mark == rhs.mark
+        }
+    }
+    
     private(set) var edges = [Int: [Edge]]()
-    var notOccupiedV: Int = 1
+    private var notOccupiedV: Int = 1
     
     static let endSymbol: Character = "$"
     
