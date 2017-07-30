@@ -26,6 +26,15 @@ class PriorityQueue<T> {
         queue.insert(element, at: index)
     }
     
+    func peek() -> T? {
+        return queue.first
+    }
+    
+    func poll() -> T? {
+        guard queue.count > 0 else { return nil }
+        return queue.removeFirst()
+    }
+    
     fileprivate func findPosition(element: T) -> Int {
         var index = 0
         while index < queue.count, comparisonBlock(queue[index], element) { index += 1 }

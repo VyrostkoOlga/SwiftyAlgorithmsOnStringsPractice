@@ -57,4 +57,20 @@ class PriorityQueueTestCase: XCTestCase {
         queue.push(element: "$aba")
         XCTAssertEqual(queue.queue, ["$aba", "a$ab", "aba$", "ba$a"])
     }
+    
+    func testPeekAndPoll() {
+        let queue = PriorityQueue<Int>(comparisonBlock: { (lhs, rhs) -> Bool in
+            lhs > rhs
+        })
+        
+        queue.push(element: 4)
+        queue.push(element: 6)
+        queue.push(element: 8)
+        queue.push(element: 5)
+        queue.push(element: 3)
+        
+        XCTAssertEqual(queue.peek(), 8)
+        XCTAssertEqual(queue.poll(), 8)
+        XCTAssertEqual(queue.queue, [6, 5, 4, 3])
+    }
 }
