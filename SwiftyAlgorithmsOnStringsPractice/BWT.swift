@@ -35,4 +35,44 @@ class BWT {
         
         return bwt
     }
+    
+    func reconstruct() -> String {
+        var result = [Character]()
+        
+        let sortedBWT = bwt.sorted()
+        var currentIndex: Int? = 0
+        while result.count != bwt.count {
+            guard let index = currentIndex else { break }
+            result.append(sortedBWT[index])
+            currentIndex = findCharacter(sortedBWT[index], skipped: countPreviousForCharacterAtIndex(index, collection: sortedBWT))
+        }
+        return String(result.suffix(from: 1) + ["$"])
+    }
+    
+    fileprivate func countPreviousForCharacterAtIndex(_ index: Int, collection: [Character]) -> Int {
+        var currentIndex = 0
+        var count = 0
+        while currentIndex < index {
+            if collection[currentIndex] == collection[index] {
+                count += 1
+            }
+            currentIndex += 1
+        }
+        return count
+    }
+    
+    fileprivate func findCharacter(_ char: Character, skipped: Int) -> Int? {
+        var index = 0
+        var currentlySkipped = 0
+        while index < bwt.count {
+            if bwt[index] == char {
+                if currentlySkipped == skipped {
+                    return index
+                }
+                currentlySkipped += 1
+            }
+            index += 1
+        }
+        return nil
+    }
 }

@@ -11,12 +11,16 @@ import XCTest
 class BWTTestCase: XCTestCase {
 
     func testBuildBWT1() {
-        let bwt = BWT.build(text: "ababa$")
+        let text = "ababa$"
+        let bwt = BWT.build(text: text)
         XCTAssertEqual(bwt.bwt, ["a", "b", "b", "$", "a", "a"])
+        XCTAssertEqual(bwt.reconstruct(), text)
     }
 
     func testBuildBWT2() {
-        let bwt = BWT.build(text: "abcaaa$")
+        let text = "abcaaa$"
+        let bwt = BWT.build(text: text)
         XCTAssertEqual(bwt.bwt, ["a", "a", "a", "c", "$", "a", "b"])
+        XCTAssertEqual(bwt.reconstruct(), text)
     }
 }

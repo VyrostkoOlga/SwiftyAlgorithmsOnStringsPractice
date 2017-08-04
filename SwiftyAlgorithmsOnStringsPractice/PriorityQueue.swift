@@ -43,6 +43,12 @@ class PriorityQueue<T> {
         return queue.removeFirst()
     }
     
+    func push(contentsOf collection: [T]) {
+        for element in collection {
+            push(element: element)
+        }
+    }
+    
     fileprivate func findPosition(element: T) -> Int {
         var index = 0
         while index < queue.count, comparisonBlock(queue[index], element) { index += 1 }
