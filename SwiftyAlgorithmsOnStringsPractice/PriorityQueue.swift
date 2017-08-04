@@ -17,6 +17,14 @@ class PriorityQueue<T> {
         self.comparisonBlock = comparisonBlock
     }
     
+    var size: Int {
+        return queue.count
+    }
+    
+    var isEmpty: Bool {
+        return queue.count == 0
+    }
+    
     func push(element: T) {
         let index = findPosition(element: element)
         guard index < queue.count else {
